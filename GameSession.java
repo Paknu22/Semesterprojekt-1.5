@@ -1,8 +1,10 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class GameSession {
     //Creating Arraylist to store objects of type Location
+    public HashMap<String, Double> allScores = new HashMap<>();
     ArrayList<Location> locations = new ArrayList<>();
     int amountOfLocations;
     //Initialising a Scanner, so we can use the players input
@@ -10,7 +12,6 @@ public class GameSession {
     Player player;
     String name;
     double score = 0;
-
     static boolean isCorrect = false;
 
     //Using this method to call all the other methods and starting the game in the "Main" class
@@ -35,6 +36,8 @@ public class GameSession {
             ChooseCountry();
             System.out.println(player.score);
         }
+        allScores.put(player.name, player.score);
+        System.out.println(allScores);
     }
 
     //Separate method to ask the player what location he wants to go to
