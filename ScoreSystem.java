@@ -1,5 +1,5 @@
 public class ScoreSystem {
-    double score;
+    public double score;
 
     public double getScore() {
         return score;
