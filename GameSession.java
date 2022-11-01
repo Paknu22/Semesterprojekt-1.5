@@ -11,6 +11,8 @@ public class GameSession {
     String name;
     double score = 0;
 
+    static boolean isCorrect = false;
+
     //Using this method to call all the other methods and starting the game in the "Main" class
     public void StartGame()
     {
@@ -31,6 +33,7 @@ public class GameSession {
         amountOfLocations = locations.size();
         for(int i = 0; i < amountOfLocations; i++) {
             ChooseCountry();
+            System.out.println(player.score);
         }
     }
 
@@ -54,30 +57,58 @@ public class GameSession {
         {
             case "1" ->{
                 locations.get(0).AskQuestion();
+                if (isCorrect == true) {
+                    player.AddToScore(10);
+                    isCorrect = false;
+                }
                 locations.remove(0);
             }
             case "2" ->{
                 locations.get(1).AskQuestion();
+                if (isCorrect == true) {
+                    player.AddToScore(10);
+                    isCorrect = false;
+                }
                 locations.remove(1);
             }
             case "3" ->{
                 locations.get(2).AskQuestion();
+                if (isCorrect == true) {
+                    player.AddToScore(10);
+                    isCorrect = false;
+                }
                 locations.remove(2);
             }
             case "4" ->{
                 locations.get(3).AskQuestion();
+                if (isCorrect == true) {
+                    player.AddToScore(10);
+                    isCorrect = false;
+                }
                 locations.remove(3);
             }
             case "5" ->{
                 locations.get(4).AskQuestion();
+                if (isCorrect == true) {
+                    player.AddToScore(10);
+                    isCorrect = false;
+                }
                 locations.remove(4);
             }
             case "6" ->{
                 locations.get(5).AskQuestion();
+                if (isCorrect == true) {
+                    player.AddToScore(10);
+                    isCorrect = false;
+                }
                 locations.remove(5);
             }
             case "7" ->{
                 locations.get(6).AskQuestion();
+                if (isCorrect == true) {
+                    player.AddToScore(10);
+                    isCorrect = false;
+                }
                 locations.remove(6);
             }
             default -> {

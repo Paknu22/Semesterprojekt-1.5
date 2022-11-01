@@ -26,6 +26,7 @@ abstract class Location {
         String answer = input.nextLine();
         if(answer.equals("Ja") || answer.equals("ja")){
             System.out.println("Korrekt!");
+            gameSession.isCorrect = true;
         }
         else if(answer.equals("Nej") || answer.equals("nej")){
             System.out.println("Forkert!");
@@ -42,6 +43,7 @@ abstract class Location {
         }
         else if(answer.equals("Nej") || answer.equals("nej")){
             System.out.println("Korrekt!");
+            gameSession.isCorrect = true;
         }
         else{
             System.out.println("Undskyld, men skriv venligst en af svarmulighederne");
@@ -53,6 +55,7 @@ abstract class Location {
         String answer = input.nextLine();
         if(answer.equals("1")){
             System.out.println("Korrekt!");
+            gameSession.isCorrect = true;
         }
         else if(answer.equals("2") || answer.equals("3")){
             System.out.println("Forkert!");
@@ -67,6 +70,7 @@ abstract class Location {
         String answer = input.nextLine();
         if(answer.equals("2")){
             System.out.println("Korrekt!");
+            gameSession.isCorrect = true;
         }
         else if(answer.equals("1") || answer.equals("3")){
             System.out.println("Forkert!");
@@ -80,6 +84,7 @@ abstract class Location {
         String answer = input.nextLine();
         if(answer.equals("3")){
             System.out.println("Korrekt!");
+            gameSession.isCorrect = true;
         }
         else if(answer.equals("1") || answer.equals("2")){
             System.out.println("Forkert!");
