@@ -39,7 +39,6 @@ public class GameSession {
         }
         allScores.put(player.name, player.score);
     }
-
     // Function that prints out all the scores of all the players, in a HashMap.
     public void getAllScores() {
         System.out.println(allScores);
