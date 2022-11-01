@@ -73,12 +73,12 @@ public class GameSession {
                 locations.remove(4);
             }
             case "6" ->{
-                    locations.get(5).AskQuestion();
-                    locations.remove(5);
+                locations.get(5).AskQuestion();
+                locations.remove(5);
             }
             case "7" ->{
-                    locations.get(6).AskQuestion();
-                    locations.remove(6);
+                locations.get(6).AskQuestion();
+                locations.remove(6);
             }
             default -> {
                 System.out.println("Please type a number from the list");
