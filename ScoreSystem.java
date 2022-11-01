@@ -5,7 +5,7 @@ public class ScoreSystem {
         return score;
     }
 
-    public void addPoints(double point) {
-        score += point;
+    public double addPoints(double point) {
+        return point;
     }
 }
