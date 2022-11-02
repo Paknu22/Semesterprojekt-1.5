@@ -94,7 +94,7 @@ public class GameSession {
                 System.out.println("Please type a number from the list");
                 ChooseCountry();}
         }
-           if (isCorrect == true) {
+           if (isCorrect) {
                player.AddToScore(10);
                isCorrect = false;
            }
