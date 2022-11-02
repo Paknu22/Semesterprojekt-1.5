@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -42,6 +43,11 @@ public class GameSession {
     // Function that prints out all the scores of all the players, in a HashMap.
     public void getAllScores() {
         System.out.println(allScores);
+    }
+
+    // Function that prints out the highest score
+    public void getHighScore() {
+        System.out.println("The Highscore is: " + Collections.max(allScores.values()));
     }
 
     //Separate method to ask the player what location he wants to go to

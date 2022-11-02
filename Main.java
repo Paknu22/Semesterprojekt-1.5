@@ -11,5 +11,6 @@ public class Main{
             gameSession.StartGame();
         }
         gameSession.getAllScores();
+        gameSession.getHighScore();
     }
 }
