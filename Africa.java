@@ -7,13 +7,13 @@ public class Africa extends Location{
         return name;
     }
 
-    public void getLocationInformation() {
-        System.out.println("""
+    public String getLocationInformation() {
+        return"""
                 I sydafrika sker der mellem 35- og 40 tusinde skovbrande årligt. Disse er primært naturlige,
                 dog er der et antal der er menneskeskabte. Disse sker grundet uagtsomhed, og især at
                 folk blot brænder deres affald. Når dette sker, så tænker de ikke over deres omgivelser
                 og den tørre jord de står på. Derfor glemmer mange også, at deres affaldsbrænde kan være
-                direkte medvirkende til stiftelsen af en skov- eller naturbrand.""");
+                direkte medvirkende til stiftelsen af en skov- eller naturbrand.""";
     }
 
     public void PrintQuestions(){

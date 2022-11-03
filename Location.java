@@ -8,17 +8,15 @@ abstract class Location {
     GameSession gameSession = new GameSession();
 
     public abstract String getLocationName();//To get the location name
-    public void getLocationInformation() //Calling the information for the player to read
-    {
-        System.out.println("Location Info has not been set");
-    }
+    public abstract String getLocationInformation(); //Calling the information for the player to read
+
     public abstract void PrintQuestions(); //Prints the questions to be answered
 
     //Collecting all the methods one place, so it's easier to be called in the "Game" class
     public void AskQuestion(){
         System.out.println("\nYou chose: " + getLocationName() + "\n");
 
-        getLocationInformation();
+        System.out.println(getLocationInformation());
         PrintQuestions();
     }
 

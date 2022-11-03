@@ -8,8 +8,8 @@ public class USA extends Location{
         return name;
     }
 
-    public void getLocationInformation() {
-        System.out.println("""
+    public String getLocationInformation() {
+        return"""
                 Når efteråret nærmer sig stiger antallet af skovbrande i det vestlige Californien.
                 Det er faktisk i efteråret at de mest skadelige og farlige skovbrande finder sted.
                 Det er i sandhed en hyggelig tid på året, hvilket også er hvorfor at mange tager
@@ -18,7 +18,7 @@ public class USA extends Location{
                 bortset fra enkelte strande) og fyrværkeri som antænder den tørre vegetation med
                 små gnister. Før har tabte cigaretskodder været en stor faktor for starten af
                 skovbrande i det vestlige californien, dog er det blevet en mindre hyppig ting.
-                """);
+                """;
     }
 
     public void PrintQuestions(){

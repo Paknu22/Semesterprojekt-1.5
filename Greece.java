@@ -6,8 +6,8 @@ public class Greece extends Location{
         return name;
     }
 
-    public void getLocationInformation() {
-        System.out.println("""
+    public String getLocationInformation() {
+        return"""
                 Sidste år mistede grækenland 250.000 hektar skov til skovbrande.
                 Brandmænd var oppe mod 20 kilometer lange skovbrande, og
                 klimaet kollapser. Regeringen kunne ikke gøre noget
@@ -18,7 +18,7 @@ public class Greece extends Location{
                 Regeringen mener også at mange af de andre skovbrande har været
                 af samme årsag, dog har det ikke endnu kunnet bevises. I år der 82
                 døde til skovbrande indtil videre.
-                """);
+                """;
     }
 
     public void PrintQuestions(){

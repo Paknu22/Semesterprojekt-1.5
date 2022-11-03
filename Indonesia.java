@@ -6,8 +6,8 @@ public class Indonesia extends Location{
         return name;
     }
 
-    public void getLocationInformation() {
-        System.out.println("""
+    public String getLocationInformation() {
+        return"""
                 Velkommen til Sumatra, Indonesien. Økonomien buldrer fremad hernede, og derfor
                 har vi en masse firmaer der har brug for plads til at vækste. Vi har en
                 masse skøn natur, og den sætter vi stor stolthed i. Det er dog ærgerligt,
@@ -20,7 +20,7 @@ public class Indonesia extends Location{
                 mod asfalten og bremser uden bremseskiver så bremsen er metal mod metal hvilket
                 også forårsager gnister. Så pas på derude, og gør alt hvad du kan for at undgå gnister
                 i tørre områder!
-                """);
+                """;
     }
 
     public void PrintQuestions(){

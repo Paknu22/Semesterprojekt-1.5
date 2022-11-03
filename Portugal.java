@@ -6,8 +6,8 @@ public class Portugal extends Location{
         return name;
     }
 
-    public void getLocationInformation() {
-        System.out.println("""
+    public String getLocationInformation() {
+        return"""
                 Velkommen til Portugal! Her har vi en masse skovbrande årligt, fordi vi også
                 har en masse tørre områder. Vores temperaturer var oppe på 40 grader
                 nogle dage sidste sommer, og vi fik allesammen en notifikation på vores
@@ -21,7 +21,7 @@ public class Portugal extends Location{
                 smide dine cigaretskodder. Hav altid en æske eller brændsikker pose med, hvis du
                 ved at du vil ryge. Det er faktisk bedst at lade helt vær med at ryge, men gør du
                 det alligevel, så husk et sikkert sted at smide det ud bagefter!
-                """);
+                """;
     }
 
     public void PrintQuestions(){
