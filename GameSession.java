@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class GameSession {
     //Creating Arraylist to store objects of type Location
@@ -15,6 +12,7 @@ public class GameSession {
     String name;
     double score = 0;
     static boolean isCorrect = false;
+
 
     //Using this method to call all the other methods and starting the game in the "Main" class
     public void StartGame()
@@ -36,13 +34,14 @@ public class GameSession {
         amountOfLocations = locations.size();
         for(int i = 0; i < amountOfLocations; i++) {
             ChooseCountry();
-            System.out.println(player.score);
+            System.out.println("Din score er " + player.score);
         }
         allScores.put(player.name, player.score);
+        System.out.print("De genstande du samlede: \n" + player.playerInventory + "\n");
     }
     // Function that prints out all the scores of all the players, in a HashMap.
     public void getAllScores() {
-        System.out.println(allScores);
+        System.out.println("\n" + allScores);
     }
 
     // Function that prints out the highest score
@@ -103,6 +102,18 @@ public class GameSession {
            if (isCorrect) {
                player.AddToScore(10);
                isCorrect = false;
+               /*
+               Her bliver der tilføjet en genstand fra Arraylisten af genstande, som der hedder
+               "gameItems". Der bliver lavet et objekt af Random klassen som der hedder
+               "random". Dette objekt bliver brugt til at lave en 50/50, altså hvis random = 1,
+               så får man ikke en genstand, men hvis random = 2, så bliver der tilføjet en
+               genstand til player.playerInventory.
+                */
+               Random random = new Random();
+               if (random.nextInt(2) + 1 == 2) {
+                   player.playerInventory.add(player.gameItems.get(0));
+                   player.gameItems.remove(0);
+               }
            }
        }
        catch (IndexOutOfBoundsException e){
