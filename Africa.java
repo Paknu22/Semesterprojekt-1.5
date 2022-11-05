@@ -1,10 +1,16 @@
 public class Africa extends Location{
 
     final String name = "South Africa";
+    public String africaItem = "Africa item";
 
     public String getLocationName()
     {
         return name;
+    }
+
+    @Override
+    public String addItem() {
+        return africaItem;
     }
 
     public String getLocationInformation() {

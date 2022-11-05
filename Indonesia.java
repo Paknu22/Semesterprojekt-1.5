@@ -1,9 +1,15 @@
 public class Indonesia extends Location{
     final String name = "Indonesia";
+    public String indonesiaItem = "Indonesia item";
 
     public String getLocationName()
     {
         return name;
+    }
+
+    @Override
+    public String addItem() {
+        return indonesiaItem;
     }
 
     public String getLocationInformation() {
