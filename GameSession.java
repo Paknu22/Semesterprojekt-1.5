@@ -12,8 +12,6 @@ public class GameSession {
     String name;
     double score = 0;
     static boolean isCorrect = false;
-
-
     //Using this method to call all the other methods and starting the game in the "Main" class
     public void StartGame()
     {
