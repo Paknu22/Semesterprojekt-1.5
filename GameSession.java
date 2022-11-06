@@ -70,36 +70,30 @@ public class GameSession {
         {
             case "1" ->{
                 locations.get(0).AskQuestion();
-                locationNumber = 0;
             }
             case "2" ->{
                 locations.get(1).AskQuestion();
-                locationNumber = 1;
             }
             case "3" ->{
                 locations.get(2).AskQuestion();
-                locationNumber = 2;
             }
             case "4" ->{
                 locations.get(3).AskQuestion();
-                locationNumber = 3;
             }
             case "5" ->{
                 locations.get(4).AskQuestion();
-                locationNumber = 4;
             }
             case "6" ->{
                 locations.get(5).AskQuestion();
-                locationNumber = 5;
             }
             case "7" ->{
                 locations.get(6).AskQuestion();
-                locationNumber = 6;
             }
             default -> {
                 System.out.println("Please type a number from the list");
                 ChooseCountry();}
         }
+        locationNumber = Integer.parseInt(answer) - 1;
            if (isCorrect){
                player.playerInventory.add(locations.get(locationNumber).addItem());
                timeSpent = locations.get(locationNumber).getTimePassed();
