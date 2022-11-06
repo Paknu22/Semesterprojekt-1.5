@@ -20,6 +20,8 @@ abstract class Location {
         stopWatch.start();
     }
 
+    public abstract String addItem();
+
     public void YesQuestion(){
         String answer = input.nextLine();
         if(answer.equals("Ja") || answer.equals("ja")){

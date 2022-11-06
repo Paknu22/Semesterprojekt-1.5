@@ -13,8 +13,6 @@ public class GameSession {
     String name;
     double score = 0;
     static boolean isCorrect = false;
-
-
     //Using this method to call all the other methods and starting the game in the "Main" class
     public void StartGame()
     {
@@ -36,9 +34,9 @@ public class GameSession {
         for(int i = 0; i < amountOfLocations; i++) {
             ChooseCountry();
             System.out.println("Din score er " + player.score);
+            System.out.print("De genstande du samlede: \n" + player.playerInventory + "\n");
         }
         allScores.put(player.name, player.score);
-        System.out.print("De genstande du samlede: \n" + player.playerInventory + "\n");
     }
     // Function that prints out all the scores of all the players, in a HashMap.
     public void getAllScores() {
@@ -70,30 +68,51 @@ public class GameSession {
         {
             case "1" ->{
                 locations.get(0).AskQuestion();
+                if (isCorrect){
+                    player.playerInventory.add(locations.get(0).addItem());
+                }
                 locations.remove(0);
             }
             case "2" ->{
                 locations.get(1).AskQuestion();
+                if (isCorrect){
+                    player.playerInventory.add(locations.get(1).addItem());
+                }
                 locations.remove(1);
             }
             case "3" ->{
                 locations.get(2).AskQuestion();
+                if (isCorrect){
+                    player.playerInventory.add(locations.get(2).addItem());
+                }
                 locations.remove(2);
             }
             case "4" ->{
                 locations.get(3).AskQuestion();
+                if (isCorrect){
+                    player.playerInventory.add(locations.get(3).addItem());
+                }
                 locations.remove(3);
             }
             case "5" ->{
                 locations.get(4).AskQuestion();
+                if (isCorrect){
+                    player.playerInventory.add(locations.get(4).addItem());
+                }
                 locations.remove(4);
             }
             case "6" ->{
                 locations.get(5).AskQuestion();
+                if (isCorrect){
+                    player.playerInventory.add(locations.get(5).addItem());
+                }
                 locations.remove(5);
             }
             case "7" ->{
                 locations.get(6).AskQuestion();
+                if (isCorrect){
+                    player.playerInventory.add(locations.get(6).addItem());
+                }
                 locations.remove(6);
             }
             default -> {
@@ -103,18 +122,6 @@ public class GameSession {
            if (isCorrect) {
                player.score += scoreSystem.addPoints(stopWatch.getElapsedTime(), stopWatch.countDown);
                isCorrect = false;
-               /*
-               Her bliver der tilføjet en genstand fra Arraylisten af genstande, som der hedder
-               "gameItems". Der bliver lavet et objekt af Random klassen som der hedder
-               "random". Dette objekt bliver brugt til at lave en 50/50, altså hvis random = 1,
-               så får man ikke en genstand, men hvis random = 2, så bliver der tilføjet en
-               genstand til player.playerInventory.
-                */
-               Random random = new Random();
-               if (random.nextInt(2) + 1 == 2) {
-                   player.playerInventory.add(player.gameItems.get(0));
-                   player.gameItems.remove(0);
-               }
            }
        }
        catch (IndexOutOfBoundsException e){

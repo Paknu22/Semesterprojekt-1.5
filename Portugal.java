@@ -1,9 +1,15 @@
 public class Portugal extends Location{
     final String name = "Portugal";
+    public String protugalItem = "Portugal item";
 
     public String getLocationName()
     {
         return name;
+    }
+
+    @Override
+    public String addItem() {
+        return protugalItem;
     }
 
     public String getLocationInformation() {
