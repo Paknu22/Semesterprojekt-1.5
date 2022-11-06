@@ -22,6 +22,7 @@ abstract class Location {
         System.out.println("\nYou chose: " + getLocationName() + "\n");
         System.out.println(getLocationInformation());
 
+        System.out.print("Tryk 'Enter' for at få spørgsmålet");
         String waitingForEnter = enterKey.nextLine();
         stopWatch.start();
         PrintQuestions();
