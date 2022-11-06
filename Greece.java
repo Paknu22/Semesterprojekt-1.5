@@ -38,7 +38,7 @@ public class Greece extends Location{
                 2: Jeg tænker mig om, tjekker området for tørre blade og accepterer derefter.\s
                 
                 3: Jeg fortæller min ven om de forfærdelige risici der kan være ved brandstiftelse i områder\s
-                med tørke og tager på McDonalds i stedet.
+                med tørke, men jeg laver bålet alligevel.
                 
                 Svarmuligheder (1 / 2 / 3)
                 """);
