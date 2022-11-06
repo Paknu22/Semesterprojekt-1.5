@@ -6,7 +6,6 @@ public class ScoreSystem {
         return score;
     }
 
-    // Denne funktion virker ikke.
     public double addPoints(long timeSpent, long maxTime) {
         double points;
         double spentDivMax = (double)timeSpent/(double)maxTime;

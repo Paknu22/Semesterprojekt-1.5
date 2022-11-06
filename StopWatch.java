@@ -1,6 +1,6 @@
 public class StopWatch {
 
-    long maxTime = 50; //How much time the player has to answer before it becomes negative
+    long maxTime = 20; //How much time the player has to answer before it becomes negative
     long timeStart = 0;
     long timeStop = 0;
     long timeElapsed = 0;

@@ -18,8 +18,4 @@ public class Player {
     public double getScore() {
         return score;
     }
-
-    public void AddToScore(double points){
-        score += points;
-    }
 }
