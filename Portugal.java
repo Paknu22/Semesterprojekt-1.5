@@ -1,9 +1,8 @@
-public class Portugal extends Location{
+public class Portugal extends Location {
     final String name = "Portugal";
     public String protugalItem = "Portugal item";
 
-    public String getLocationName()
-    {
+    public String getLocationName() {
         return name;
     }
 
@@ -13,7 +12,7 @@ public class Portugal extends Location{
     }
 
     public String getLocationInformation() {
-        return"""
+        return """
                 Velkommen til Portugal! Her har vi en masse skovbrande årligt, fordi vi også
                 har en masse tørre områder. Vores temperaturer var oppe på 40 grader
                 nogle dage sidste sommer, og vi fik allesammen en notifikation på vores
@@ -30,7 +29,7 @@ public class Portugal extends Location{
                 """;
     }
 
-    public void PrintQuestions(){
+    public void PrintQuestions() {
         System.out.println("Må man gerne smide sine cigaretskodder på jorden lige efter man har røget færdig?\n" +
                 "Svarmuligheder (Ja / Nej)");
         NoQuestion();

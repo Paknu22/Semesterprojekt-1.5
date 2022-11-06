@@ -14,11 +14,10 @@ abstract class Location {
 
     public abstract String getLocationName();//To get the location name
     public abstract String getLocationInformation(); //Calling the information for the player to read
-
     public abstract void PrintQuestions(); //Prints the questions to be answered
 
     //Collecting all the methods one place, so it's easier to be called in the "Game" class
-    public void AskQuestion(){
+    public void AskQuestion() {
         System.out.println("\nYou chose: " + getLocationName() + "\n");
         System.out.println(getLocationInformation());
 
@@ -26,7 +25,7 @@ abstract class Location {
         String waitingForEnter = enterKey.nextLine();
         stopWatch.start();
         PrintQuestions();
-        if(gameSession.isCorrect == true){
+        if (gameSession.isCorrect == true) {
             timePassed = stopWatch.getElapsedTime();
         }
     }

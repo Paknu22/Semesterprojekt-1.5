@@ -1,9 +1,8 @@
-public class Indonesia extends Location{
+public class Indonesia extends Location {
     final String name = "Indonesia";
     public String indonesiaItem = "Indonesia item";
 
-    public String getLocationName()
-    {
+    public String getLocationName() {
         return name;
     }
 
@@ -13,7 +12,7 @@ public class Indonesia extends Location{
     }
 
     public String getLocationInformation() {
-        return"""
+        return """
                 Velkommen til Sumatra, Indonesien. Økonomien buldrer fremad hernede, og derfor
                 har vi en masse firmaer der har brug for plads til at vækste. Vi har en
                 masse skøn natur, og den sætter vi stor stolthed i. Det er dog ærgerligt,
@@ -29,11 +28,11 @@ public class Indonesia extends Location{
                 """;
     }
 
-    public void PrintQuestions(){
+    public void PrintQuestions() {
         System.out.println("""
                 Du kører på vejen i Sumatra, Indonesien og mærker at bilen bremser lidt underligt.
                 Det er som om der er noget der skurrer omme bagfra. Hvad gør du?
-                
+                                
                 1: Jeg ignorerer det og kører videre uden bekymring.
                 2: Jeg sætter bilen i frigear, lader den rulle og trækker ind til siden når
                 det muligt hvorefter jeg tjekker bremsernes tilstand. Er de i dårlig stand

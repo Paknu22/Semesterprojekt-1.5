@@ -1,9 +1,8 @@
-public class Brazil extends Location{
+public class Brazil extends Location {
     final String name = "Brazil";
     public String brazilItem = "brazil item";
 
-    public String getLocationName()
-    {
+    public String getLocationName() {
         return name;
     }
 
@@ -13,7 +12,7 @@ public class Brazil extends Location{
     }
 
     public String getLocationInformation() {
-        return"""
+        return """
                 Amazonas er verdens største regnskov, og den huser mere end 30 millioner mennesker samt
                 1/10 af alle kendte dyrearter. I de seneste år er der blevet stiftet et stort antal
                 skovbrande i Amazonas. Helt præcist 33.116 alene i August 2022. Dette gøres af militante
@@ -24,7 +23,7 @@ public class Brazil extends Location{
                 """;
     }
 
-    public void PrintQuestions(){
+    public void PrintQuestions() {
         System.out.println("""
                 Er det en god ide at den brassilianske regering starter alle disse skovbrande i Amazonas”?
                 Svarmuligheder (Ja / Nej)

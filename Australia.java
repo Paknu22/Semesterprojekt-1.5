@@ -1,9 +1,8 @@
-public class Australia extends Location{
+public class Australia extends Location {
     final String name = "Australia";
     public String australiaItem = "Australia item";
 
-    public String getLocationName()
-    {
+    public String getLocationName() {
         return name;
     }
 
@@ -13,7 +12,7 @@ public class Australia extends Location{
     }
 
     public String getLocationInformation() {
-        return"""
+        return """
                 Velkommen, du er i Oodnadatta - den tørreste by i Australien. Her har vi en masse skovbrande årligt,
                 fordi der er så meget brandbart materiale! Vi har nemlig fulgt amerikanske anvisninger og prøvet
                 at undgå skovbrande i en så høj grad, at vi har alt for meget vegetabilsk materiale der, i naturens
@@ -24,7 +23,7 @@ public class Australia extends Location{
                 """;
     }
 
-    public void PrintQuestions(){
+    public void PrintQuestions() {
         System.out.println("Bør man bekæmpe alle former for skovbrande?\n" +
                 "Svarmuligheder (Ja / Nej)");
         NoQuestion();

@@ -1,10 +1,9 @@
-public class USA extends Location{
+public class USA extends Location {
 
     final String name = "USA";
     public String usaItem = "USA item";
 
-    public String getLocationName()
-    {
+    public String getLocationName() {
         return name;
     }
 
@@ -14,7 +13,7 @@ public class USA extends Location{
     }
 
     public String getLocationInformation() {
-        return"""
+        return """
                 Når efteråret nærmer sig stiger antallet af skovbrande i det vestlige Californien.
                 Det er faktisk i efteråret at de mest skadelige og farlige skovbrande finder sted.
                 Det er i sandhed en hyggelig tid på året, hvilket også er hvorfor at mange tager
@@ -26,7 +25,7 @@ public class USA extends Location{
                 """;
     }
 
-    public void PrintQuestions(){
+    public void PrintQuestions() {
         System.out.println("Skal man slukke sit ulovlige bål når man er færdig med at bruge det?\n" +
                 "Svarmuligheder (Ja / Nej)");
         YesQuestion();
