@@ -4,6 +4,7 @@ abstract class Location {
     //Abstract class which inherits all the other locations
     //Writing a Scanner here, which can be used in all the other subclasses
     Scanner input = new Scanner(System.in);
+    Scanner enterKey = new Scanner(System.in);
     StopWatch stopWatch = new StopWatch();
     GameSession gameSession = new GameSession();
 
@@ -20,6 +21,8 @@ abstract class Location {
     public void AskQuestion(){
         System.out.println("\nYou chose: " + getLocationName() + "\n");
         System.out.println(getLocationInformation());
+
+        String waitingForEnter = enterKey.nextLine();
         stopWatch.start();
         PrintQuestions();
         if(gameSession.isCorrect == true){
