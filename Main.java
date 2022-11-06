@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args){
-        System.out.println("Hvor mange spillere skal spille? ");
+        System.out.println("How many players are playing? ");
         GameSession gameSession = new GameSession();
 
         Scanner input = new Scanner(System.in);

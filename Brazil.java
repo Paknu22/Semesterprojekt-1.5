@@ -26,9 +26,7 @@ public class Brazil extends Location{
 
     public void PrintQuestions(){
         System.out.println("""
-                Er det en god ide at tage på sabbatårsrejse til Rio De Janeiro for at finde sig
-                selv og samtidigt støtte den brasilianske økonomi hvis man støtter klimaet
-                og i forvejen spiser vegansk mad for at “passe på dyrene”?
+                Er det en god ide at den brassilianske regering starter alle disse skovbrande i Amazonas”?
                 Svarmuligheder (Ja / Nej)
                 """);
         NoQuestion();

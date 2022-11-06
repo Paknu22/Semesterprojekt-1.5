@@ -12,6 +12,7 @@ public class GameSession {
     String name;
     double score = 0;
     static boolean isCorrect = false;
+    static boolean gameOver = false;
     //Using this method to call all the other methods and starting the game in the "Main" class
     public void StartGame()
     {
@@ -24,16 +25,17 @@ public class GameSession {
         locations.add(new Portugal());
         locations.add(new Greece());
 
-        System.out.println("Welcome to World of Skovbrand! Venligst indtast dit navn: ");
+        System.out.println("Welcome to World of Forest fires! Please enter your name: ");
         name = playerInput.nextLine();
         System.out.println("Hello " + name + "! Ready to play?");
         player = new Player(name, score);
 
         amountOfLocations = locations.size();
-        for(int i = 0; i < amountOfLocations; i++) {
+        for(int i = 0; i < amountOfLocations && !gameOver; i++) {
             ChooseCountry();
-            System.out.println("Din score er " + player.score);
-            System.out.print("De genstande du samlede: \n" + player.playerInventory + "\n");
+            System.out.println("Your score is " + player.score);
+            System.out.print("Your items collected: \n" + player.playerInventory + "\n");
+            forestFire();
         }
         allScores.put(player.name, player.score);
     }
@@ -45,6 +47,26 @@ public class GameSession {
     // Function that prints out the highest score
     public void getHighScore() {
         System.out.println("The Highscore is: " + Collections.max(allScores.values()));
+    }
+
+    // Function that randomly starts a forest fire in the game.
+    public void forestFire() {
+        if (player.score > 0 && player.playerInventory.size() > 0) {
+            Random random = new Random();
+            if (random.nextInt(2) == 1) {
+                System.out.print("A man made forest fire has started somewhere in the world. \n" +
+                        "Enter the name of one of your items you wish to use to " +
+                        "extinguish the forest fire.\n");
+                Scanner itemInput = new Scanner(System.in);
+                String chosenItem = itemInput.nextLine();
+                player.playerInventory.remove(chosenItem);
+                System.out.print("The man made forest fire has been extinguished\n");
+            }
+        } else if (player.score > 0) {
+            System.out.print("A man made forest fire has started somewhere in the world. \n" +
+                    "You have no items to extinguish the forest fire, the game is over. \n");
+            gameOver = true;
+        }
     }
 
     //Separate method to ask the player what location he wants to go to
