@@ -9,6 +9,7 @@ public class GameSession {
     Scanner playerInput = new Scanner(System.in);
     Player player;
     ScoreSystem scoreSystem = new ScoreSystem();
+    StopWatch stopWatch = new StopWatch();
     String name;
     double score = 0;
     static boolean isCorrect = false;
@@ -100,7 +101,7 @@ public class GameSession {
                 ChooseCountry();}
         }
            if (isCorrect) {
-               player.AddToScore(10);
+               player.score += scoreSystem.addPoints(stopWatch.getElapsedTime(), stopWatch.countDown);
                isCorrect = false;
                /*
                Her bliver der tilføjet en genstand fra Arraylisten af genstande, som der hedder
