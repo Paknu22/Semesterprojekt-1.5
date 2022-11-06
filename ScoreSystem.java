@@ -6,6 +6,7 @@ public class ScoreSystem {
         return score;
     }
 
+    // Denne funktion virker ikke.
     public double addPoints(long timeSpent, long maxTime) {
         double points;
         points = (1-(timeSpent/maxTime)/2)*1000;

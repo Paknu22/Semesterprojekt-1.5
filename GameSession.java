@@ -9,7 +9,6 @@ public class GameSession {
     Scanner playerInput = new Scanner(System.in);
     Player player;
     ScoreSystem scoreSystem = new ScoreSystem();
-    StopWatch stopWatch = new StopWatch();
     String name;
     double score = 0;
     static boolean isCorrect = false;
@@ -120,7 +119,7 @@ public class GameSession {
                 ChooseCountry();}
         }
            if (isCorrect) {
-               player.score += scoreSystem.addPoints(stopWatch.getElapsedTime(), stopWatch.countDown);
+               player.AddToScore(10);
                isCorrect = false;
            }
        }
