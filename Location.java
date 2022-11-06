@@ -7,6 +7,10 @@ abstract class Location {
     StopWatch stopWatch = new StopWatch();
     GameSession gameSession = new GameSession();
 
+    public long timePassed;
+
+    public double points;
+
     public abstract String getLocationName();//To get the location name
     public abstract String getLocationInformation(); //Calling the information for the player to read
 
@@ -16,8 +20,11 @@ abstract class Location {
     public void AskQuestion(){
         System.out.println("\nYou chose: " + getLocationName() + "\n");
         System.out.println(getLocationInformation());
-        PrintQuestions();
         stopWatch.start();
+        PrintQuestions();
+        if(gameSession.isCorrect == true){
+            timePassed = stopWatch.getElapsedTime();
+        }
     }
 
     public abstract String addItem();
@@ -35,7 +42,6 @@ abstract class Location {
             System.out.println("Undskyld, men skriv venligst en af svarmulighederne");
             PrintQuestions();
         }
-        stopWatch.stop();
     }
     public void NoQuestion(){
         String answer = input.nextLine();
@@ -94,5 +100,9 @@ abstract class Location {
             System.out.println("Undskyld, men skriv venligst en af svarmulighederne");
             PrintQuestions();
         }
+    }
+
+    public long getTimePassed() {
+        return timePassed;
     }
 }

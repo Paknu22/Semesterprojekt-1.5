@@ -1,26 +1,15 @@
 public class StopWatch {
 
-    public long counter;
-    public long countDown = 5;
+    long maxTime = 50; //How much time the player has to answer before it becomes negative
     long timeStart = 0;
     long timeStop = 0;
     long timeElapsed = 0;
-    boolean running = false;
+    boolean running;
 
 
-    public long start() {
+    public void start() {
         this.timeStart = System.currentTimeMillis();
         this.running = true;
-        while (running) {
-            timeElapsed = ((System.currentTimeMillis() - timeStart) / 1000);
-            counter = timeElapsed;
-            //System.out.println(counter);
-            if (counter >= countDown) {
-                stop();
-                System.out.println(timeElapsed);
-            }
-        }
-        return timeElapsed;
     }
 
 
@@ -41,9 +30,7 @@ public class StopWatch {
         return timeElapsed;
     }
 
-    public void CountDown() {
-        if(timeElapsed >= countDown){
-            stop();
-        }
+    public long getMaxTime() {
+        return maxTime;
     }
 }

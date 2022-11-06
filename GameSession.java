@@ -12,6 +12,7 @@ public class GameSession {
     StopWatch stopWatch = new StopWatch();
     String name;
     double score = 0;
+    long timeSpent;
     static boolean isCorrect = false;
     //Using this method to call all the other methods and starting the game in the "Main" class
     public void StartGame()
@@ -51,6 +52,7 @@ public class GameSession {
     //Separate method to ask the player what location he wants to go to
     public void ChooseCountry()
     {
+        long bla = 0;
         int countLocations = 0;
 
         System.out.println("Please choose a country: ");
@@ -70,6 +72,7 @@ public class GameSession {
                 locations.get(0).AskQuestion();
                 if (isCorrect){
                     player.playerInventory.add(locations.get(0).addItem());
+                    timeSpent = locations.get(0).getTimePassed();
                 }
                 locations.remove(0);
             }
@@ -77,6 +80,7 @@ public class GameSession {
                 locations.get(1).AskQuestion();
                 if (isCorrect){
                     player.playerInventory.add(locations.get(1).addItem());
+                    timeSpent = locations.get(1).getTimePassed();
                 }
                 locations.remove(1);
             }
@@ -84,6 +88,7 @@ public class GameSession {
                 locations.get(2).AskQuestion();
                 if (isCorrect){
                     player.playerInventory.add(locations.get(2).addItem());
+                    timeSpent = locations.get(2).getTimePassed();
                 }
                 locations.remove(2);
             }
@@ -91,6 +96,7 @@ public class GameSession {
                 locations.get(3).AskQuestion();
                 if (isCorrect){
                     player.playerInventory.add(locations.get(3).addItem());
+                    timeSpent = locations.get(3).getTimePassed();
                 }
                 locations.remove(3);
             }
@@ -98,6 +104,7 @@ public class GameSession {
                 locations.get(4).AskQuestion();
                 if (isCorrect){
                     player.playerInventory.add(locations.get(4).addItem());
+                    timeSpent = locations.get(4).getTimePassed();
                 }
                 locations.remove(4);
             }
@@ -105,6 +112,7 @@ public class GameSession {
                 locations.get(5).AskQuestion();
                 if (isCorrect){
                     player.playerInventory.add(locations.get(5).addItem());
+                    timeSpent = locations.get(5).getTimePassed();
                 }
                 locations.remove(5);
             }
@@ -112,6 +120,7 @@ public class GameSession {
                 locations.get(6).AskQuestion();
                 if (isCorrect){
                     player.playerInventory.add(locations.get(6).addItem());
+                    timeSpent = locations.get(6).getTimePassed();
                 }
                 locations.remove(6);
             }
@@ -119,10 +128,11 @@ public class GameSession {
                 System.out.println("Please type a number from the list");
                 ChooseCountry();}
         }
-           if (isCorrect) {
-               player.score += scoreSystem.addPoints(stopWatch.getElapsedTime(), stopWatch.countDown);
+           if (isCorrect){
+               player.score += scoreSystem.addPoints(timeSpent, stopWatch.getMaxTime());
                isCorrect = false;
            }
+
        }
        catch (IndexOutOfBoundsException e){
            System.out.println("Sorry try choosing another number");
