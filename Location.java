@@ -34,7 +34,7 @@ abstract class Location {
             timePassed = stopWatch.getElapsedTime();
         }
     }
-
+    
     public abstract String addItem();
 
     public void YesQuestion(){
