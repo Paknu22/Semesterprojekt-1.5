@@ -39,6 +39,7 @@ public class GameSession {
             System.out.print("Your collected items: \n" + player.playerInventory + "\n");
             forestFire();
         }
+        gameOver = false;
         allScores.put(player.name, player.score);
     }
     // Function that prints out all the scores of all the players, in a HashMap.
