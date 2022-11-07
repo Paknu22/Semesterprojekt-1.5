@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Africa extends Location{
 
     final String name = "South Africa";
@@ -8,9 +11,20 @@ public class Africa extends Location{
         return name;
     }
 
+
     @Override
     public String addItem() {
         return africaItem;
+    }
+
+    @Override
+    public String countryLocation1() {
+        return "Location 1";
+    }
+
+    @Override
+    public String countryLocation2() {
+        return "Location 2";
     }
 
     public String getLocationInformation() {
@@ -29,5 +43,20 @@ public class Africa extends Location{
                 området kan være i en super-tør periode?
                 Svarmuligheder (Ja / Nej)""");
         NoQuestion();
+    }
+
+    @Override
+    public String getLocationInformation2() {
+        return """
+                Information 2
+                """;
+    }
+
+    @Override
+    public void PrintQuestions2() {
+        System.out.println("""
+                Spørgsmål 2
+                """);
+        YesQuestion();
     }
 }

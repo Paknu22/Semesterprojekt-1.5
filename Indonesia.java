@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Indonesia extends Location {
+
     final String name = "Indonesia";
     public String indonesiaItem = "Indonesia item";
 
@@ -9,6 +13,16 @@ public class Indonesia extends Location {
     @Override
     public String addItem() {
         return indonesiaItem;
+    }
+
+    @Override
+    public String countryLocation1() {
+        return "Location 1";
+    }
+
+    @Override
+    public String countryLocation2() {
+        return "Location 2";
     }
 
     public String getLocationInformation() {
@@ -41,5 +55,20 @@ public class Indonesia extends Location {
                 Svarmuligheder (1 / 2 / 3)
                 """);
         Correct2();
+    }
+
+    @Override
+    public String getLocationInformation2() {
+        return """
+                Information 2
+                """;
+    }
+
+    @Override
+    public void PrintQuestions2() {
+        System.out.println("""
+                Spørgsmål 2
+                """);
+        YesQuestion();
     }
 }

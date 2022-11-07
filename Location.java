@@ -12,15 +12,20 @@ abstract class Location {
 
     public double points;
 
+    public abstract String countryLocation1();
+    public abstract String countryLocation2();
     public abstract String getLocationName();//To get the location name
     public abstract String getLocationInformation(); //Calling the information for the player to read
+    public abstract String getLocationInformation2(); //Calling the information for the player to read
+
     public abstract void PrintQuestions(); //Prints the questions to be answered
+    public abstract void PrintQuestions2(); //Prints the questions to be answered
 
     //Collecting all the methods one place, so it's easier to be called in the "Game" class
     public void AskQuestion() {
-        System.out.println("\nYou chose: " + getLocationName() + "\n");
+        System.out.println("\nYou chose: " + getLocationName());
+        Scanner choice = new Scanner(System.in);
         System.out.println(getLocationInformation());
-
         System.out.print("Tryk 'Enter' for at få spørgsmålet");
         String waitingForEnter = enterKey.nextLine();
         stopWatch.start();

@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class USA extends Location {
 
     final String name = "USA";
@@ -10,6 +13,16 @@ public class USA extends Location {
     @Override
     public String addItem() {
         return usaItem;
+    }
+
+    @Override
+    public String countryLocation1() {
+        return "Location 1";
+    }
+
+    @Override
+    public String countryLocation2() {
+        return "Location 2";
     }
 
     public String getLocationInformation() {
@@ -28,6 +41,21 @@ public class USA extends Location {
     public void PrintQuestions() {
         System.out.println("Skal man slukke sit ulovlige bål når man er færdig med at bruge det?\n" +
                 "Svarmuligheder (Ja / Nej)");
+        YesQuestion();
+    }
+
+    @Override
+    public String getLocationInformation2() {
+        return """
+                Information 2
+                """;
+    }
+
+    @Override
+    public void PrintQuestions2() {
+        System.out.println("""
+                Spørgsmål 2
+                """);
         YesQuestion();
     }
 }
