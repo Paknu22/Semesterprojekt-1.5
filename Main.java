@@ -10,7 +10,7 @@ public class Main{
         for(int i = 0; i<amountOfPlayers; i++) {
             gameSession.StartGame();
         }
-        gameSession.getAllScores();
-        gameSession.getHighScore();
+        gameSession.getAllScores(); //viser alle brugeres score
+        gameSession.getHighScore(); //viser den højeste score
     }
 }

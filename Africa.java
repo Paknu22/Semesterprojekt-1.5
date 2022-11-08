@@ -12,7 +12,7 @@ public class Africa extends Location{
     }
 
 
-    @Override
+    @Override // fordi den ikke har nogen body
     public String addItem() {
         return africaItem;
     }
