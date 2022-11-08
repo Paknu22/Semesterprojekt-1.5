@@ -27,11 +27,11 @@ public class Brazil extends Location {
                 """;
     }
 
-    public void PrintQuestions() {
+    public void printQuestions() {
         System.out.println("""
                 Er det en godt at den brassilianske regering starter alle disse skovbrande i Amazonas”?
                 Svarmuligheder (Ja / Nej)
                 """);
-        NoQuestion();
+        noQuestion();
     }
 }

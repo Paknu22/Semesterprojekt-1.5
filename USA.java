@@ -28,9 +28,9 @@ public class USA extends Location {
                 """;
     }
 
-    public void PrintQuestions() {
+    public void printQuestions() {
         System.out.println("Skal man slukke sit ulovlige bål når man er færdig med at bruge det?\n" +
                 "Svarmuligheder (Ja / Nej)");
-        YesQuestion();
+        yesQuestion();
     }
 }

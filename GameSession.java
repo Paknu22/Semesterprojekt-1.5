@@ -93,25 +93,25 @@ public class GameSession {
         switch (answer)
         {
             case "1" ->{
-                locations.get(0).AskQuestion();
+                locations.get(0).askQuestion();
             }
             case "2" ->{
-                locations.get(1).AskQuestion();
+                locations.get(1).askQuestion();
             }
             case "3" ->{
-                locations.get(2).AskQuestion();
+                locations.get(2).askQuestion();
             }
             case "4" ->{
-                locations.get(3).AskQuestion();
+                locations.get(3).askQuestion();
             }
             case "5" ->{
-                locations.get(4).AskQuestion();
+                locations.get(4).askQuestion();
             }
             case "6" ->{
-                locations.get(5).AskQuestion();
+                locations.get(5).askQuestion();
             }
             case "7" ->{
-                locations.get(6).AskQuestion();
+                locations.get(6).askQuestion();
             }
             default -> {
                 System.out.println("Skriv venlist et nummer fra listen");

@@ -32,7 +32,7 @@ public class Indonesia extends Location {
                 """;
     }
 
-    public void PrintQuestions() {
+    public void printQuestions() {
         System.out.println("""
                 Du kører på vejen i Sumatra, Indonesien og mærker at bilen bremser lidt underligt.
                 Det er som om der er noget der skurrer omme bagfra. Hvad gør du?
@@ -44,6 +44,6 @@ public class Indonesia extends Location {
                 3: Jeg undlader at bruge bremserne på min tur.
                 Svarmuligheder (1 / 2 / 3)
                 """);
-        Correct2();
+        correct2();
     }
 }

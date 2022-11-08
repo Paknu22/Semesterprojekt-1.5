@@ -33,9 +33,9 @@ public class Portugal extends Location {
                 """;
     }
 
-    public void PrintQuestions() {
+    public void printQuestions() {
         System.out.println("Må man gerne smide sine cigaretskodder på jorden lige efter man har røget færdig?\n" +
                 "Svarmuligheder (Ja / Nej)");
-        NoQuestion();
+        noQuestion();
     }
 }

@@ -27,9 +27,9 @@ public class Australia extends Location {
                 """;
     }
 
-    public void PrintQuestions() {
+    public void printQuestions() {
         System.out.println("Bør man bekæmpe alle former for skovbrande?\n" +
                 "Svarmuligheder (Ja / Nej)");
-        NoQuestion();
+        noQuestion();
     }
 }

@@ -30,7 +30,7 @@ public class Greece extends Location {
                 """;
     }
 
-    public void PrintQuestions() {
+    public void printQuestions() {
         System.out.println("""
                 Du er på ferie i Grækenland med din familie om sommeren, og I har lyst til at tage på en udflugt\s
                 til en skov hvor i skal hygge jer. Din ven spørger om I ikke skal lave et bål og grille\s
@@ -45,6 +45,6 @@ public class Greece extends Location {
                                 
                 Svarmuligheder (1 / 2 / 3)
                 """);
-        Correct2();
+        correct2();
     }
 }

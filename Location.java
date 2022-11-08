@@ -14,16 +14,15 @@ abstract class Location {
 
     public abstract String getLocationName();//To get the location name
     public abstract String getLocationInformation(); //Calling the information for the player to read
-    public abstract void PrintQuestions(); //Prints the questions to be answered
+    public abstract void printQuestions(); //Prints the questions to be answered
     //Collecting all the methods one place, so it's easier to be called in the "Game" class
-    public void AskQuestion() {
+    public void askQuestion() {
         System.out.println("\nDu valgte: " + getLocationName());
-        Scanner choice = new Scanner(System.in);
         System.out.println(getLocationInformation());
         System.out.print("Tryk 'Enter' for at få spørgsmålet");
         String waitingForEnter = enterKey.nextLine();
         stopWatch.start();
-        PrintQuestions();
+        printQuestions();
         if (gameSession.isCorrect == true) {
             timePassed = stopWatch.getElapsedTime();
         }
@@ -31,7 +30,7 @@ abstract class Location {
     
     public abstract String addItem(); // Adding the item from the room to the players inventory
 
-    public void YesQuestion(){
+    public void yesQuestion(){
         String answer = input.nextLine();
         if(answer.equals("Ja") || answer.equals("ja")){
             System.out.println("Korrekt!");
@@ -42,10 +41,10 @@ abstract class Location {
         }
         else{
             System.out.println("Undskyld, men skriv venligst en af svarmulighederne");
-            PrintQuestions();
+            printQuestions();
         }
     }
-    public void NoQuestion(){
+    public void noQuestion(){
         String answer = input.nextLine();
         if(answer.equals("Ja") || answer.equals("ja")){
             System.out.println("Forkert!");
@@ -56,11 +55,11 @@ abstract class Location {
         }
         else{
             System.out.println("Undskyld, men skriv venligst en af svarmulighederne");
-            PrintQuestions();
+            printQuestions();
         }
     }
 
-    public void Correct1(){
+    public void correct1(){
         String answer = input.nextLine();
         if(answer.equals("1")){
             System.out.println("Korrekt!");
@@ -71,11 +70,11 @@ abstract class Location {
         }
         else {
             System.out.println("Undskyld, men skriv venligst en af svarmulighederne");
-            PrintQuestions();
+            printQuestions();
         }
     }
 
-    public void Correct2(){
+    public void correct2(){
         String answer = input.nextLine();
         if(answer.equals("2")){
             System.out.println("Korrekt!");
@@ -86,10 +85,10 @@ abstract class Location {
         }
         else {
             System.out.println("Undskyld, men skriv venligst en af svarmulighederne");
-            PrintQuestions();
+            printQuestions();
         }
     }
-    public void Correct3(){
+    public void correct3(){
         String answer = input.nextLine();
         if(answer.equals("3")){
             System.out.println("Korrekt!");
@@ -100,7 +99,7 @@ abstract class Location {
         }
         else {
             System.out.println("Undskyld, men skriv venligst en af svarmulighederne");
-            PrintQuestions();
+            printQuestions();
         }
     }
 

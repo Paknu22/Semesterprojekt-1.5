@@ -26,12 +26,12 @@ public class Africa extends Location{
                 direkte medvirkende til stiftelsen af en skov- eller naturbrand.""";
     }
 
-    public void PrintQuestions(){
+    public void printQuestions(){
         System.out.println("""
 
                 Bør man brænde sit eget affald (evt. haveaffald) i baghaven, taget i betragtning at
                 området kan være i en super-tør periode?
                 Svarmuligheder (Ja / Nej)""");
-        NoQuestion();
+        noQuestion();
     }
 }
