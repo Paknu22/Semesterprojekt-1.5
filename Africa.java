@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Africa extends Location{
 
     final String name = "Syd Africa";
-    public String africaItem = "Vandhane";
+    public String africaItem = "Brandværn";
 
     public String getLocationName()
     {

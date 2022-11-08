@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Brazil extends Location {
 
     final String name = "Brasilien";
-    public String brazilItem = "Vandpistol";
+    public String brazilItem = "Vandslange";
 
     public String getLocationName() {
         return name;
@@ -29,7 +29,7 @@ public class Brazil extends Location {
 
     public void PrintQuestions() {
         System.out.println("""
-                Er det en god ide at den brassilianske regering starter alle disse skovbrande i Amazonas”?
+                Er det en godt at den brassilianske regering starter alle disse skovbrande i Amazonas”?
                 Svarmuligheder (Ja / Nej)
                 """);
         NoQuestion();
