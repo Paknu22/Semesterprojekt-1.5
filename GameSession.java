@@ -27,16 +27,16 @@ public class GameSession {
         locations.add(new Portugal());
         locations.add(new Greece());
 
-        System.out.println("Welcome to World of Forest fires! Please enter your name: ");
+        System.out.println("Velkommen til World of Skovbrand! Venligst indtast dit navn: ");
         name = playerInput.nextLine();
-        System.out.println("Hello " + name + "! Ready to play?");
+        System.out.println("Hej " + name + "! Klar til at spille?");
         player = new Player(name, score);
 
         amountOfLocations = locations.size();
         for(int i = 0; i < amountOfLocations && !gameOver; i++) {
             ChooseCountry();
-            System.out.println("Your score is " + player.score);
-            System.out.print("Your collected items: \n" + player.playerInventory + "\n");
+            System.out.println("Din score er " + player.score);
+            System.out.print("Dine samlede genstande: \n" + player.playerInventory + "\n");
             forestFire();
         }
         gameOver = false;
@@ -49,7 +49,7 @@ public class GameSession {
 
     // Function that prints out the highest score
     public void getHighScore() {
-        System.out.println("The Highscore is: " + Collections.max(allScores.values()));
+        System.out.println("Den højeste score var: " + Collections.max(allScores.values()));
     }
 
     // Function that randomly starts a forest fire in the game.
@@ -57,18 +57,18 @@ public class GameSession {
         if (player.score > 0 && player.playerInventory.size() > 0) {
             Random random = new Random();
             if (random.nextInt(2) == 1) {
-                System.out.print("A man made forest fire has started in the world. \n" +
-                        "Enter the name of one the items you wish to use to " +
-                        "extinguish the forest fire with.\n");
+                System.out.print("En menneskeskabt er startet et sted i verden. \n" +
+                        "Skriv navnet på en af dine genstande som du vil bruge " +
+                        "til at slukke skovbranden med.\n");
                 Scanner itemInput = new Scanner(System.in);
                 String chosenItem = itemInput.nextLine();
                 player.playerInventory.remove(chosenItem);
-                System.out.print("The man made forest fire has been extinguished.\n");
+                System.out.print("Den menneskeskabte skovbrand er blevet slukket.\n");
             }
         } else if (player.score > 0) {
-            System.out.print("A man made forest fire has started somewhere in the world. \n" +
-                    "You have no items in your inventory to extinguish the forest fire, " +
-                    "the game is over.\n");
+            System.out.print("En menneskeskabt skovbrand er startet et sted i verden. \n" +
+                    "Du har ingen genstande i din inventar til at slukke skovbranden med, " +
+                    "spillet er ovre.\n");
             gameOver = true;
         }
     }
@@ -79,7 +79,7 @@ public class GameSession {
         int locationNumber = 0;
         int countLocations = 0;
 
-        System.out.println("Please choose a country: ");
+        System.out.println("Vælg venligt et land: ");
         for (Location l: locations)
         {
             countLocations++;
@@ -114,7 +114,7 @@ public class GameSession {
                 locations.get(6).AskQuestion();
             }
             default -> {
-                System.out.println("Please type a number from the list");
+                System.out.println("Skriv venlist et nummer fra listen");
                 ChooseCountry();}
         }
         locationNumber = Integer.parseInt(answer) - 1;
@@ -128,7 +128,7 @@ public class GameSession {
 
        }
        catch (IndexOutOfBoundsException e){
-           System.out.println("Sorry try choosing another number");
+           System.out.println("Vælg venligst et andet nummer");
            ChooseCountry();
        }
     }

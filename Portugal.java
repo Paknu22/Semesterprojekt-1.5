@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Portugal extends Location {
 
     final String name = "Portugal";
-    public String protugalItem = "Portugal item";
+    public String protugalItem = "Brandslukker";
 
     public String getLocationName() {
         return name;
@@ -13,16 +13,6 @@ public class Portugal extends Location {
     @Override
     public String addItem() {
         return protugalItem;
-    }
-
-    @Override
-    public String countryLocation1() {
-        return "Location 1";
-    }
-
-    @Override
-    public String countryLocation2() {
-        return "Location 2";
     }
 
     public String getLocationInformation() {
@@ -47,20 +37,5 @@ public class Portugal extends Location {
         System.out.println("Må man gerne smide sine cigaretskodder på jorden lige efter man har røget færdig?\n" +
                 "Svarmuligheder (Ja / Nej)");
         NoQuestion();
-    }
-
-    @Override
-    public String getLocationInformation2() {
-        return """
-                Information 2
-                """;
-    }
-
-    @Override
-    public void PrintQuestions2() {
-        System.out.println("""
-                Spørgsmål 2
-                """);
-        YesQuestion();
     }
 }

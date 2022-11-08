@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Brazil extends Location {
 
-    final String name = "Brazil";
-    public String brazilItem = "brazil item";
+    final String name = "Brasilien";
+    public String brazilItem = "Vandpistol";
 
     public String getLocationName() {
         return name;
@@ -13,16 +13,6 @@ public class Brazil extends Location {
     @Override
     public String addItem() {
         return brazilItem;
-    }
-
-    @Override
-    public String countryLocation1() {
-        return "Location 1";
-    }
-
-    @Override
-    public String countryLocation2() {
-        return "Location 2";
     }
 
     public String getLocationInformation() {
@@ -43,20 +33,5 @@ public class Brazil extends Location {
                 Svarmuligheder (Ja / Nej)
                 """);
         NoQuestion();
-    }
-
-    @Override
-    public String getLocationInformation2() {
-        return """
-                Information 2
-                """;
-    }
-
-    @Override
-    public void PrintQuestions2() {
-        System.out.println("""
-                Spørgsmål 2
-                """);
-        YesQuestion();
     }
 }
